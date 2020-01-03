@@ -1,0 +1,9 @@
+<%= simple_form_for @review do |f| %>
+	<%= f.collection_select :book_id, Book.all, :id, :title %>
+	<%= f.collection_select :user_id, User.all, :id, :email %>
+	<%= f.input :rating, label: "Book Rating" %>
+	<%= f.input :comment %>
+	<%= f.button :submit %>
+<% end %>
+
+<%= link_to "Go Back", books_path %>

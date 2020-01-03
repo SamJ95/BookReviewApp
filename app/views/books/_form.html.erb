@@ -1,0 +1,7 @@
+<%= simple_form_for @book do |f| %>
+	<%= f.file_field :book_img %>
+	<%= f.input :title, label: "Book Title" %>
+	<%= f.input :description %>
+	<%= f.input :author %>
+	<%= f.button :submit %>
+<% end %>
